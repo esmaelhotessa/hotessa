@@ -1,0 +1,432 @@
+ <!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Serviços | Esmael Hotessa</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(#ffffff,#fefeff,#ffffff)
+
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 1000;
+    font-family: center;
+    letter-spacing: -2.7px;
+}
+
+
+.nome-preto {
+    color: #111111;
+}
+
+
+.nome-azul {
+    color: #1976d2;
+}
+
+/*==================== SERVIÇOS ====================*/
+
+.services{
+padding:px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:40px;
+}
+
+.title h2{
+font-size:40px;
+margin:15px 0;
+color:#080505;
+}
+
+.container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:#ffffff00;
+padding:35px 30px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.4s;
+position:relative;
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:#f9f7f6;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+background: #0e00cc;
+color: #820404;
+}
+
+.icon{
+
+width:80px;
+height:80px;
+background:#0077ff;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-bottom:25px;
+
+}
+
+.icon i{
+
+font-size:34px;
+color:#fff;
+
+}
+
+.card h3{
+
+font-size:24px;
+margin-bottom:15px;
+color:#0a2342;
+
+}
+
+.card p{
+
+line-height:1.8;
+color:#666;
+margin-bottom:25px;
+
+}
+
+.btn{
+
+display:inline-block;
+padding:12px 28px;
+background:#0077ff00;
+ border: 2px solid rgb(225, 225, 225);
+color:#020101;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.btn:hover{
+ border: 2px solid rgb(15, 4, 140);
+background:#00029100;
+color:#050507
+}
+
+/*==================== CTA ====================*/
+
+.cta{
+
+margin-top:20px;
+background:linear-gradient(135deg,#e5e5e7,#f3f4f4);
+border-radius:10px;
+text-align:center;
+color:#100808;
+
+}
+
+.cta h2{
+
+font-size:38px;
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:30px;
+
+}
+
+.cta a{
+
+display:inline-block;
+padding:15px 40px;
+background:#ffffff;
+ border: 2px solid rgb(22, 0, 190);
+color:#0b0303;
+text-decoration:none;
+font-weight:700;
+border-radius:50px;
+transition:.3s;
+
+}
+
+.cta a:hover{
+border: 2px solid rgba(2, 4, 118, 0.523);
+transform:scale(1.05);
+
+}
+
+/*==================== RESPONSIVO ====================*/
+
+@media(max-width:768px){
+
+.banner{
+height:250px;
+}
+
+.banner-content h1{
+font-size:35px;
+}
+
+.title h2{
+font-size:30px;
+}
+
+.cta h2{
+font-size:28px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="logo">
+ <span class="nome-preto">Nossos </span> 
+ <span class="nome-azul">serviços</span>
+
+
+</div>
+
+
+
+<!--==================== SERVIÇOS ====================-->
+
+<section class="services">
+
+<div class="title">
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-chalkboard-teacher"></i>
+</div>
+
+<h3>Formação</h3>
+
+<p>
+
+Cursos completos de produção de sabão líquido, sabão em barra,
+detergentes, amaciadores, desinfetantes e muito mais.
+
+</p>
+
+<a href="#" class="btn">Saiba Mais</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-user-tie"></i>
+</div>
+
+<h3>Consultoria Técnica</h3>
+
+<p>
+
+Orientação profissional para implementação e melhoria da produção
+de produtos de limpeza.
+
+</p>
+
+<a href="#" class="btn">Saiba Mais</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-flask"></i>
+</div>
+
+<h3>Desenvolvimento de Fórmulas</h3>
+
+<p>
+
+Criação e aperfeiçoamento de fórmulas de acordo com as necessidades
+do cliente.
+
+</p>
+
+<a href="#" class="btn">Saiba Mais</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-industry"></i>
+</div>
+
+<h3>Montagem de Fábricas</h3>
+
+<p>
+
+Auxiliamos na criação de pequenas e médias fábricas para produção
+de sabão e detergentes.
+
+</p>
+
+<a href="#" class="btn">Saiba Mais</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-vials"></i>
+</div>
+
+<h3>Venda de Matérias-Primas</h3>
+
+<p>
+
+Fornecemos soda cáustica, essências, corantes, conservantes,
+tensoativos e outros insumos.
+
+</p>
+
+<a href="#" class="btn">Ver Produtos</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-box-open"></i>
+</div>
+
+<h3>Venda de Embalagens</h3>
+
+<p>
+
+Embalagens, frascos, garrafões, tampas, baldes e diversos acessórios
+para seus produtos.
+
+</p>
+
+<a href="#" class="btn">Ver Produtos</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-headset"></i>
+</div>
+
+<h3>Assistência Técnica</h3>
+
+<p>
+
+Acompanhamento especializado para garantir uma produção eficiente
+e de alta qualidade.
+
+</p>
+
+<a href="#" class="btn">Saiba Mais</a>
+
+</div>
+
+<div class="card">
+
+<div class="icon">
+<i class="fas fa-chart-line"></i>
+</div>
+
+<h3>Consultoria Empresarial</h3>
+
+<p>
+
+Planeamento do negócio, custos, preços, estratégias de vendas e
+crescimento da sua empresa.
+
+</p>
+
+<a href="#" class="btn">Saiba Mais</a>
+
+</div>
+
+</div>
+
+<div class="cta">
+
+<h2>Vamos Trabalhar Juntos?</h2>
+
+<p>
+
+Entre em contacto com a Esmael Hotessa e descubra as melhores
+soluções para iniciar ou expandir o seu negócio de produção
+de sabão e produtos de limpeza.
+
+</p>
+
+<a href="index.html">
+voltar ao inicio
+</a>
+
+</div>
+
+</section>
+
+</body>
+</html>
