@@ -1,0 +1,807 @@
+/*==================================================
+  ESMAEL HOTESSA
+  STYLE.CSS
+===================================================*/
+
+/*================ GOOGLE FONT ================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*================ RESET ================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#222;
+    overflow-x:hidden;
+    line-height:1.7;
+}
+
+/*================ VARIÁVEIS ================*/
+
+:root{
+
+    --primary:#0A3D91;
+    --primary-dark:#072c69;
+    --secondary:#2563eb;
+    --accent:#00C9A7;
+
+    --white:#ffffff;
+    --black:#111111;
+
+    --text:#444;
+    --light:#f8f9fc;
+
+    --border:#e8e8e8;
+
+    --shadow:
+        0 10px 35px rgba(0,0,0,.08);
+
+    --shadow-hover:
+        0 20px 45px rgba(0,0,0,.15);
+
+    --radius:18px;
+
+    --transition:.4s ease;
+
+}
+
+/*================ SCROLLBAR ================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#edf2f8;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--secondary);
+}
+
+/*================ CONTAINER ================*/
+
+.container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/*================ LINKS ================*/
+
+a{
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+/*================ IMAGENS ================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*================ BOTÕES ================*/
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color:#fff;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    border:2px solid white;
+
+    color:#fff;
+
+    transition:.4s;
+
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+/*================ SECTION ================*/
+
+.section{
+
+    padding:110px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title span{
+
+    display:inline-block;
+
+    background:#e7f0ff;
+
+    color:var(--primary);
+
+    padding:8px 22px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+    color:#111;
+
+}
+
+.section-title p{
+
+    color:#666;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/*================ LOADER ================*/
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-content img{
+
+    width:120px;
+
+    margin:auto;
+
+    animation:logoFloat 3s infinite;
+
+}
+
+.loader-content h2{
+
+    margin-top:25px;
+
+    color:var(--primary);
+
+    font-size:30px;
+
+}
+
+.loader-content span{
+
+    display:block;
+
+    width:180px;
+
+    height:6px;
+
+    border-radius:20px;
+
+    margin:30px auto;
+
+    background:linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary));
+
+    animation:loading 2s infinite;
+
+}
+
+/*================ WHATSAPP ================*/
+
+.whatsapp{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:30px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    box-shadow:var(--shadow);
+
+    z-index:999;
+
+}
+
+.whatsapp:hover{
+
+    transform:scale(1.12);
+
+}
+
+/*================ BOTÃO TOPO ================*/
+
+#topBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:110px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    box-shadow:var(--shadow);
+
+    display:none;
+
+    transition:.4s;
+
+    z-index:998;
+
+}
+
+#topBtn:hover{
+
+    background:var(--secondary);
+
+    transform:translateY(-5px);
+
+}
+
+/*================ ANIMAÇÕES ================*/
+
+@keyframes logoFloat{
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes loading{
+
+    0%{
+
+        transform:scaleX(.2);
+
+    }
+
+    50%{
+
+        transform:scaleX(1);
+
+    }
+
+    100%{
+
+        transform:scaleX(.2);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+                HEADER PREMIUM
+==================================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    transition:.4s;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+header.scrolled{
+
+    background:#ffffff;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+}
+
+header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:90px;
+
+}
+
+/*================ LOGO ================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:#fff;
+
+}
+
+header.scrolled .logo{
+
+    color:var(--primary);
+
+}
+
+.logo img{
+
+    width:65px;
+
+    height:65px;
+
+    object-fit:contain;
+
+    transition:.4s;
+
+}
+
+.logo:hover img{
+
+    transform:rotate(-5deg) scale(1.05);
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
+.logo span{
+
+    display:block;
+
+    font-size:13px;
+
+    opacity:.8;
+
+    margin-top:4px;
+
+}
+
+/*================ MENU ================*/
+
+#navbar{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+#navbar a{
+
+    position:relative;
+
+    color:#fff;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+header.scrolled #navbar a{
+
+    color:#222;
+
+}
+
+#navbar a:hover{
+
+    color:#FFD54F;
+
+}
+
+header.scrolled #navbar a:hover{
+
+    color:var(--primary);
+
+}
+
+/*================ LINHA ANIMADA ================*/
+
+#navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    background:#FFD54F;
+
+    border-radius:30px;
+
+    transition:.35s;
+
+}
+
+header.scrolled #navbar a::after{
+
+    background:var(--primary);
+
+}
+
+#navbar a:hover::after{
+
+    width:100%;
+
+}
+
+/*================ BOTÃO HEADER ================*/
+
+.header-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.header-buttons .btn-primary{
+
+    padding:14px 28px;
+
+    font-size:15px;
+
+}
+
+/*================ MENU MOBILE ================*/
+
+#menu{
+
+    display:none;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:22px;
+
+    transition:.35s;
+
+}
+
+#menu:hover{
+
+    background:var(--secondary);
+
+    transform:scale(1.05);
+
+}
+
+/*================ HERO ESPAÇAMENTO ================*/
+
+.hero{
+
+    padding-top:90px;
+
+}
+
+/*================ HEADER ANIMATION ================*/
+
+header{
+
+    animation:headerDown .8s ease;
+
+}
+
+@keyframes headerDown{
+
+    from{
+
+        transform:translateY(-100%);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/*================ RESPONSIVO ================*/
+
+@media(max-width:992px){
+
+    #menu{
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+    }
+
+    #navbar{
+
+        position:absolute;
+
+        top:90px;
+
+        left:0;
+
+        width:100%;
+
+        background:#fff;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:30px;
+
+        gap:20px;
+
+        display:none;
+
+        box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+    }
+
+    #navbar.active{
+
+        display:flex;
+
+    }
+
+    #navbar a{
+
+        color:#222;
+
+        width:100%;
+
+        padding:10px 0;
+
+    }
+
+    .header-buttons .btn-primary{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .logo img{
+
+        width:52px;
+
+        height:52px;
+
+    }
+
+    .logo h2{
+
+        font-size:20px;
+
+    }
+
+    .logo span{
+
+        font-size:12px;
+
+    }
+
+    header .container{
+
+        height:80px;
+
+    }
+
+    #navbar{
+
+        top:80px;
+
+    }
+
+}
